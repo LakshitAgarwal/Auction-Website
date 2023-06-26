@@ -18,7 +18,8 @@ function createRow(id) {
 
   let header = document.createElement("th");
   header.scope = "row";
-  header.innerText = id;
+  id = parseInt(id)
+  header.innerText = (id+1);
   row.appendChild(header);
 
   row.appendChild(document.createElement("td"));
@@ -41,7 +42,7 @@ function dataListenerCallback(data) {
     // Extract bid data
     let bidCount = Object.keys(bids).length - 1;
     row.children[1].innerText = bids[0].title;
-    row.children[2].innerText = `£${bids[bidCount].amount.toFixed(2)}`;
+    row.children[2].innerText = `₹${bids[bidCount].amount.toFixed(2)}`;
     row.children[3].innerText = bidCount;
     if (bids[bidCount].uid) {
       getDoc(doc(db, "users", bids[bidCount].uid)).then((user) => {

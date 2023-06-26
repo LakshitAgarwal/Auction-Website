@@ -11,8 +11,8 @@
     />
     <meta name="keywords" content="Online Auctions" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Markatplace</title>
-    <link rel="icon" type="image/png" href="./img/favicon.ico" />
+    <title>AuctionEase</title>
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
 
     <!-- Bootstrap -->
     <link
@@ -39,39 +39,54 @@
 
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-dark bg-primary">
+    <nav class="navbar ">
       <div class="container-fluid">
-        <a class="navbar-brand mb-0 h1 me-auto">
+        <a class="navbar-brand mb-0 h1 me-auto" href="/index.html">
           <img
             src="./img/logo.png"
             alt=""
-            width="30"
-            height="24"
-            class="d-inline-block align-text-top"
+            width="180"
+            height="45"
+            class=" logo"
           />
-          The Markatplace
         </a>
         <div class="row row-cols-auto">
           <a class="navbar-brand" id="username-display"></a>
           <a
             id="admin-button"
-            class="btn btn-secondary me-2"
+            class="btn btn-secondary"
             href="admin.html"
             role="button"
             style="display: none"
             >Admin</a
           >
-          <button id="auth-button" class="btn btn-secondary me-2">
+          <button id="auth-button" class="btn btn-secondary">
             Sign up
           </button>
         </div>
       </div>
     </nav>
+
+    <!-- Slider Code -->
+    <div id="2"></div>
+    <script>
+        load("slider.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(2).innerHTML = req.responseText;
+        }
+    </script>
+
+
+
     <!-- Grid of auction items -->
     <div id="auction-container" class="container">
       <div id="auction-grid" class="row row-cols-1 row-cols-md-3 g-4"></div>
 
-      <footer
+      <!-- <footer
         class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
       >
         <div class="col-md-4 d-flex align-items-center">
@@ -88,7 +103,7 @@
             ></a>
           </li>
         </ul>
-      </footer>
+      </footer> -->
     </div>
 
     <!-- Login popup -->
@@ -97,7 +112,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 id="login-modal-title" class="modal-title">
-              Sign up for Markatplace Auction
+              Sign up for Auction
             </h5>
           </div>
           <div class="modal-body">
@@ -218,5 +233,37 @@
       autoSignIn();
       setupItems();
     </script>
+    <div id="4"></div>
+    <script>
+        load("footer.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(4).innerHTML = req.responseText;
+        }
+    </script>
+    <!-- <footer>
+      <p>Copyright &#169; Auction Ease</p>
+  </footer> -->
   </body>
+
+<!-- slider JS START -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script>
+    $(document).ready(function()
+    {
+    $('#containerSlider').slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        });
+    });
+</script>
+
+
 </html>

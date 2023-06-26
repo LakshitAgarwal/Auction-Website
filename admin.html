@@ -12,7 +12,7 @@
     <meta name="keywords" content="Online Auctions" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Markatplace</title>
-    <link rel="icon" type="image/png" href="./img/favicon.ico" />
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
 
     <!-- Bootstrap -->
     <link
@@ -39,28 +39,29 @@
 
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-dark bg-primary">
+    <nav class="navbar ">
       <div class="container-fluid">
-        <a class="navbar-brand mb-0 h1 me-auto">
+        <a class="navbar-brand mb-0 h1 me-auto" href="/index.html">
           <img
             src="./img/logo.png"
             alt=""
-            width="30"
-            height="24"
-            class="d-inline-block align-text-top"
+            width="180"
+            height="45"
+            class=" logo"
           />
-          The Markatplace
+          <a href="/index.html"></a>
         </a>
         <div class="row row-cols-auto">
           <a class="navbar-brand" id="username-display"></a>
           <a
             id="admin-button"
-            class="btn btn-secondary me-2"
+            class="btn btn-secondary"
             href="index.html"
             role="button"
-            >Main</a
+            style="display: none"
+            >Home</a
           >
-          <button id="auth-button" class="btn btn-secondary me-2">
+          <button id="auth-button" class="btn btn-secondary">
             Sign up
           </button>
         </div>
@@ -71,7 +72,7 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            <th scope="col">S.No</th>
             <th scope="col">Title</th>
             <th scope="col">Price</th>
             <th scope="col">Bids</th>
@@ -79,10 +80,11 @@
             <th scope="col">Time left</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+        </tbody>
       </table>
 
-      <footer
+      <!-- <footer
         class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
       >
         <div class="col-md-4 d-flex align-items-center">
@@ -99,7 +101,7 @@
             ></a>
           </li>
         </ul>
-      </footer>
+      </footer> -->
     </div>
 
     <!-- Login popup -->

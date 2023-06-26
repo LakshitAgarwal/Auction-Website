@@ -76,7 +76,7 @@ function signUp() {
   console.debug("signUp() write to users/${auth.currentUser.uid}");
   authButton.innerText = "Sign out";
   document.getElementById("username-display").innerText =
-    "Hi " + username.value;
+    "Hi " + username.value + "👋  Keep Bidding";
   username.classList.add("is-valid");
   setTimeout(() => {
     signUpModalObject.hide();
@@ -187,7 +187,7 @@ if (bidModal) {
         } else {
           amountElement.classList.add("is-invalid");
           feedback.innerText =
-            "You must bid at least £" + (currentBid + 1).toFixed(2) + "!";
+            "You must bid at least ₹" + (currentBid + 1).toFixed(2) + "!";
           bidModalSubmit.removeAttribute("disabled", "");
         }
       });
